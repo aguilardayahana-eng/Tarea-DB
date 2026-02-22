@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "699b65a7fcd79c45563d1539"
+  },
+  "usuario": {
+    "nombre": "Ana Pérez",
+    "correo": "ana@email.com"
+  },
+  "prendas": [
+    {
+      "nombre": "Blusa Casual",
+      "marca": "Zara",
+      "cantidad": 2,
+      "precio_unitario": 15000
+    }
+  ],
+  "total": 30000,
+  "fecha": "2025-07-01"
+},
+{
+  "_id": {
+    "$oid": "699b65a7fcd79c45563d153a"
+  },
+  "usuario": {
+    "nombre": "Laura Sánchez",
+    "correo": "laura@email.com"
+  },
+  "prendas": [
+    {
+      "nombre": "Camiseta Deportiva",
+      "marca": "Nike",
+      "cantidad": 1,
+      "precio_unitario": 18000
+    }
+  ],
+  "total": 18000,
+  "fecha": "2025-07-02"
+},
+{
+  "_id": {
+    "$oid": "699b65a7fcd79c45563d153b"
+  },
+  "usuario": {
+    "nombre": "Carlos Ramírez",
+    "correo": "carlos@email.com"
+  },
+  "prendas": [
+    {
+      "nombre": "Pantalón Deportivo",
+      "marca": "Adidas",
+      "cantidad": 1,
+      "precio_unitario": 25000
+    }
+  ],
+  "total": 25000,
+  "fecha": "2025-07-02"
+},
+{
+  "_id": {
+    "$oid": "699b65a7fcd79c45563d153c"
+  },
+  "usuario": {
+    "nombre": "Sofía Herrera",
+    "correo": "sofia@email.com"
+  },
+  "prendas": [
+    {
+      "nombre": "Vestido Floral",
+      "marca": "Forever 21",
+      "cantidad": 2,
+      "precio_unitario": 22000
+    }
+  ],
+  "total": 44000,
+  "fecha": "2025-07-03"
+},
+{
+  "_id": {
+    "$oid": "699b65a7fcd79c45563d153d"
+  },
+  "usuario": {
+    "nombre": "Andrés Molina",
+    "correo": "andres@email.com"
+  },
+  "prendas": [
+    {
+      "nombre": "Chaqueta Juvenil",
+      "marca": "Pull&Bear",
+      "cantidad": 1,
+      "precio_unitario": 30000
+    }
+  ],
+  "total": 30000,
+  "fecha": "2025-07-03"
+}]
