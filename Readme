@@ -1,15 +1,22 @@
-#Tarea #1
-##Tienda 
- ###Este tarea consiste en la creación de una Base de Datos para tiendas
+# 🛍 Proyecto Tienda de Ropa - MongoDB
 
- #Colecciones
+## 📌 Descripción del Proyecto
 
- ##Usuarios
- ##Marcas
- ##Predas
- ##Ventas
+Este proyecto consiste en el desarrollo de una base de datos no relacional utilizando MongoDB para la gestión de una tienda de ropa.
 
- #Integrante 
+La base de datos permite administrar:
 
-##Dayahana Aguilar
+- Usuarios
+- Marcas
+- Prendas
+- Ventas
+
+Se implementan operaciones CRUD (Create, Read, Update, Delete) para cada colección, así como consultas avanzadas utilizando el framework de agregación (aggregate).
+
+---
+
+## 🗄 Base de Datos
+
+**Nombre de la base de datos:**
+
 
