@@ -35,18 +35,22 @@ Respuesta esperada (JSON):
     "rol": "cliente"
   }
 ]
---
-##Crear usuarios
-** Método: POST
-**URL: /multiple
-**Descripción: Permite crear varios usuarios a la vez enviando un arreglo de objetos JSON.
-**Ejemplo de solicitud:
+```
+## Crear usuarios
+**Método:** POST
+**URL:** /multiple
+**Descripción:** Permite crear varios usuarios a la vez enviando un arreglo de objetos JSON.
+**Ejemplo de solicitud:**
+```bash
 [
   {"nombre": "Juan Pérez", "email": "juanp@gmail.com", "edad": 25, "rol": "cliente"},
   {"nombre": "María López", "email": "marial@gmail.com", "edad": 30, "rol": "cliente"},
   {"nombre": "Carlos Gómez", "email": "carlosg@gmail.com", "edad": 28, "rol": "administrador"}
 ]
-Respuesta esperada (JSON):
+```
+
+## Respuesta esperada (JSON):
+```bash
 {
   "message": "Usuarios creados correctamente",
   "usuarios": [
@@ -54,20 +58,23 @@ Respuesta esperada (JSON):
     {"nombre": "María López", "email": "marial@gmail.com", "edad": 30, "rol": "cliente"}
   ]
 }
-Modificar usuario
-Método: PUT
-URL: /:id
-Descripción: Actualiza los datos de un usuario específico usando su id.
-Parámetros de ruta:
-id → ID del usuario a actualizar.
-Ejemplo de solicitud:
+```
+## Modificar usuario
+**Método:** PUT
+**URL:** /:id
+**Descripción:** Actualiza los datos de un usuario específico usando su id.
+**Parámetros de ruta:**
+***id → ID del usuario a actualizar.***
+**Ejemplo de solicitud:**
+```bash
 {
   "nombre": "Juan Pérez",
   "email": "juanp@gmail.com",
   "edad": 26,
   "rol": "cliente"
 }
-PUT http://localhost:3000/api/usuarios/69c6e6b22bd7fb5b68f50c4c
+```
+### PUT http://localhost:3000/api/usuarios/69c6e6b22bd7fb5b68f50c4c
 Respuesta esperada (JSON):
 {
   "message": "Usuario actualizado correctamente",
