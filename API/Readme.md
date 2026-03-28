@@ -164,9 +164,9 @@ http://localhost:3000/api/ventas
 ## ✏️ Actualizar una venta
 - **Método:** PUT
 - **Endpoint:** /api/ventas/{id}
-
-📥 Cuerpo de la solicitud
 ```json
+📥 Cuerpo de la solicitud
+
 {
   "producto": "Camisa",
   "precio": 30,
@@ -175,25 +175,27 @@ http://localhost:3000/api/ventas
 ```
 📌 Ejemplo de URL
 http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
-📤 Respuesta esperada
 ```json
+📤 Respuesta esperada
+
 {
   "mensaje": "Venta actualizada correctamente"
 }
 ```
-❌ Eliminar una venta
-Método: DELETE
-Endpoint: /api/ventas/{id}
-📌 Ejemplo de URL
+## ❌ Eliminar una venta
+- **Método:** DELETE
+
+## Endpoint: /api/ventas/{id}
+
+## 📌 Ejemplo de URL
 http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
+```json
 📤 Respuesta esperada
 {
   "mensaje": "Venta eliminada correctamente"
 }
-⚙️ Consideraciones
+```
+## ⚙️ Consideraciones
 El servidor debe estar ejecutándose en el puerto 3000.
 Los identificadores (_id) son generados por la base de datos (MongoDB).
 Se recomienda utilizar herramientas como Postman para probar los endpoints.
-👩‍💻 Autor
-
-Desarrollado como parte de un proyecto académico.
