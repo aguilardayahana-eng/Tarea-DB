@@ -1,3 +1,18 @@
+## 📌 Introducción
+
+Este proyecto consiste en el desarrollo de una API REST que permite la gestión de usuarios, ventas, marcas, prendas y reportes. Proporciona endpoints para realizar operaciones CRUD y consultas, facilitando la administración de la información de manera eficiente.
+
+
+# 👤 API de Usuarios
+# 🛒 API de Ventas
+# 🏷️ API de Marcas
+# 👕 Módulo de Prendas (Reportes y Gestión)
+# 📊 Módulo de Reportes
+
+
+
+
+
 
 | Módulo      | Endpoint                                      | Descripción                          |
 |------------|-----------------------------------------------|--------------------------------------|
@@ -209,6 +224,9 @@ http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
   "mensaje": "Venta eliminada correctamente"
 }
 ```
+
+# 🏷️ API de Marcas
+
 ## ➕ Crear múltiples marcas
 
 **Método:** `POST`  
@@ -287,6 +305,8 @@ http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
   "message": "Marca eliminada correctamente"
 }
 ```
+# 👕 Módulo de Prendas (Reportes y Gestión)
+
 
 ## 🔗 URL Base
 http://localhost:3000/api/prendas
@@ -374,6 +394,7 @@ Descripción: Permite registrar varias prendas en una sola solicitud.
 }
 ```
 ---
+# 📊 Módulo de Reportes
 
 ## 🔗 URL Base
 `http://localhost:3000/api/prendas`
