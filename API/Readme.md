@@ -267,3 +267,183 @@ http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
   "message": "Marca eliminada correctamente"
 }
 ```
+
+## 🔗 URL Base
+http://localhost:3000/api/prendas
+
+---
+
+## 📖 Obtener prendas
+
+**Método:** `GET`  
+**Endpoint:** `/api/prendas`
+
+### 📤 Respuesta esperada
+```json
+[
+  {
+    "_id": "ID",
+    "nombre": "Camiseta Deportiva",
+    "talla": "M",
+    "precio": 20,
+    "marca": "Nike"
+  }
+]
+```
+## ➕ Crear múltiples prendas
+
+**Método:** POST
+**Endpoint:** /api/prendas/multiple
+
+Descripción: Permite registrar varias prendas en una sola solicitud.
+```json
+📥 Cuerpo de la solicitud
+[
+  { "nombre": "Camiseta Deportiva", "talla": "M", "precio": 20, "marca": "Nike" },
+  { "nombre": "Pantalón Jogger", "talla": "L", "precio": 35, "marca": "Adidas" },
+  { "nombre": "Sudadera con Capucha", "talla": "XL", "precio": 50, "marca": "Puma" },
+  { "nombre": "Chaqueta Impermeable", "talla": "M", "precio": 80, "marca": "Reebok" },
+  { "nombre": "Short Deportivo", "talla": "S", "precio": 25, "marca": "Under Armour" },
+  { "nombre": "Zapatillas Running", "talla": "42", "precio": 100, "marca": "New Balance" },
+  { "nombre": "Tenis Casual", "talla": "41", "precio": 60, "marca": "Vans" },
+  { "nombre": "Camiseta Básica", "talla": "M", "precio": 15, "marca": "Converse" },
+  { "nombre": "Sudadera Retro", "talla": "L", "precio": 45, "marca": "Fila" },
+  { "nombre": "Jeans", "talla": "32", "precio": 55, "marca": "Levi's" }
+]
+```
+```json
+📤 Respuesta esperada
+{
+  "message": "Prendas creadas correctamente"
+}
+```
+## ✏️ Actualizar prenda
+
+-**Método:** PUT
+-**Endpoint:** /api/prendas/{id}
+```json
+📥 Cuerpo de la solicitud
+{
+  "marca": "Nike",
+  "nombre": "Camiseta Deportiva",
+  "precio": 25,
+  "talla": "M"
+}
+```
+## 📌 Ejemplo de URL
+
+**http://localhost:3000/api/prendas/69c6e8042bd7fb5b68f50c60**
+```json
+📤 Respuesta esperada
+{
+  "message": "Prenda actualizada correctamente"
+}
+```
+## ❌ Eliminar prenda
+
+-**Método:** DELETE
+-**Endpoint:** /api/prendas/{id}
+
+## 📌 Ejemplo de URL
+
+**http://localhost:3000/api/prendas/69c6e8042bd7fb5b68f50c69**
+```json
+📤 Respuesta esperada
+{
+  "message": "Prenda eliminada correctamente"
+}
+```
+---
+
+## 🔗 URL Base
+`http://localhost:3000/api/prendas`
+
+---
+
+## 📖 Consultar prendas
+
+**Método:** `GET`  
+**Endpoint:** `/api/prendas`
+
+**Descripción:** Obtiene la lista de todas las prendas registradas en el sistema.
+
+### 📤 Respuesta esperada
+```json
+[
+  {
+    "_id": "ID",
+    "nombre": "Camiseta Deportiva",
+    "talla": "M",
+    "precio": 20,
+    "marca": "Nike"
+  }
+]
+```
+## ➕ Registrar múltiples prendas
+
+-**Método:** POST
+-**Endpoint:** /api/prendas/multiple
+
+Descripción: Permite registrar varias prendas en una sola solicitud (carga masiva).
+```json
+📥 Cuerpo de la solicitud
+[
+  { "nombre": "Camiseta Deportiva", "talla": "M", "precio": 20, "marca": "Nike" },
+  { "nombre": "Pantalón Jogger", "talla": "L", "precio": 35, "marca": "Adidas" },
+  { "nombre": "Sudadera con Capucha", "talla": "XL", "precio": 50, "marca": "Puma" },
+  { "nombre": "Chaqueta Impermeable", "talla": "M", "precio": 80, "marca": "Reebok" },
+  { "nombre": "Short Deportivo", "talla": "S", "precio": 25, "marca": "Under Armour" },
+  { "nombre": "Zapatillas Running", "talla": "42", "precio": 100, "marca": "New Balance" },
+  { "nombre": "Tenis Casual", "talla": "41", "precio": 60, "marca": "Vans" },
+  { "nombre": "Camiseta Básica", "talla": "M", "precio": 15, "marca": "Converse" },
+  { "nombre": "Sudadera Retro", "talla": "L", "precio": 45, "marca": "Fila" },
+  { "nombre": "Jeans", "talla": "32", "precio": 55, "marca": "Levi's" }
+]
+```
+```json
+📤 Respuesta esperada
+{
+  "message": "Prendas registradas correctamente"
+}
+```
+## ✏️ Actualizar prenda
+
+-**Método:** PUT
+-**Endpoint:** /api/prendas/{id}
+
+Descripción: Actualiza la información de una prenda específica.
+
+```json
+📥 Cuerpo de la solicitud
+{
+  "marca": "Nike",
+  "nombre": "Camiseta Deportiva",
+  "precio": 25,
+  "talla": "M"
+}
+```
+## 📌 Ejemplo de URL
+
+**http://localhost:3000/api/prendas/69c6e8042bd7fb5b68f50c60**
+```json
+📤 Respuesta esperada
+{
+  "message": "Prenda actualizada correctamente"
+}
+```
+## ❌ Eliminar prenda
+
+-**Método:** DELETE
+-**Endpoint:** /api/prendas/{id}
+
+**Descripción:** Elimina una prenda del sistema.
+
+## 📌 Ejemplo de URL
+
+**http://localhost:3000/api/prendas/69c6e8042bd7fb5b68f50c69**
+```json
+📤 Respuesta esperada
+{
+  "message": "Prenda eliminada correctamente"
+}
+```
