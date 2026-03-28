@@ -89,7 +89,6 @@ Respuesta esperada (JSON):
             }
 }
 ```
-
 ## Eliminar usuario
 **Método:** DELETE
 **URL:** /:id
@@ -97,11 +96,9 @@ Respuesta esperada (JSON):
 **Parámetros de ruta:**
 ***id → ID del usuario a eliminar.***
 **Ejemplo de solicitud:**
-
-```bash
-
 DELETE http://localhost:3000/api/usuarios/69c6e6b22bd7fb5b68f50c55
 Respuesta esperada (JSON):
+```bash
 {
   "message": "Usuario eliminado correctamente"
 }
@@ -146,9 +143,11 @@ http://localhost:3000/api/ventas
 {
   "mensaje": "Venta creada correctamente"
 }
-📖 Obtener todas las ventas
-Método: GET
-Endpoint: /api/ventas
+```
+## 📖 Obtener todas las ventas
+- **Método:** GET
+- **Endpoint:** /api/ventas
+```json
 📤 Respuesta esperada
 
 [
@@ -161,21 +160,27 @@ Endpoint: /api/ventas
     "fecha": "2026-03-23"
   }
 ]
-✏️ Actualizar una venta
-Método: PUT
-Endpoint: /api/ventas/{id}
+```
+## ✏️ Actualizar una venta
+- **Método:** PUT
+- **Endpoint:** /api/ventas/{id}
+
 📥 Cuerpo de la solicitud
+```json
 {
   "producto": "Camisa",
   "precio": 30,
   "cantidad": 3
 }
+```
 📌 Ejemplo de URL
 http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
 📤 Respuesta esperada
+```json
 {
   "mensaje": "Venta actualizada correctamente"
 }
+```
 ❌ Eliminar una venta
 Método: DELETE
 Endpoint: /api/ventas/{id}
