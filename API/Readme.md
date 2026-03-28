@@ -103,7 +103,7 @@ Respuesta esperada (JSON):
   "message": "Usuario eliminado correctamente"
 }
 ```
-___________________________________________________________________________________
+## ___________________________________________________________________________________
 
 # 📄 API de Ventas
 
@@ -189,10 +189,6 @@ http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
   "mensaje": "Venta eliminada correctamente"
 }
 ```
-## ⚙️ Consideraciones
-El servidor debe estar ejecutándose en el puerto 3000.
-Los identificadores (_id) son generados por la base de datos (MongoDB).
-Se recomienda utilizar herramientas como Postman para probar los endpoints.
 ## ➕ Crear múltiples marcas
 
 **Método:** `POST`  
@@ -213,16 +209,19 @@ Se recomienda utilizar herramientas como Postman para probar los endpoints.
   { "nombre": "Converse", "pais": "USA" },
   { "nombre": "Fila", "pais": "Italia" },
   { "nombre": "Levi's", "pais": "USA" }
-]
+] ```
+```json
 📤 Respuesta esperada
 {
   "message": "Marcas creadas correctamente"
 }
-📖 Obtener marcas
+```
 
-Método: GET
-Endpoint: /api/marcas
+## 📖 Obtener marcas
 
+-**Método:** GET
+- **Endpoint:** /api/marcas
+```json
 📤 Respuesta esperada
 [
   {
@@ -231,34 +230,40 @@ Endpoint: /api/marcas
     "pais": "USA"
   }
 ]
-✏️ Actualizar marca
+```
+## ✏️ Actualizar marca
 
-Método: PUT
-Endpoint: /api/marcas/{id}
-
+-**Método:** PUT
+-**Endpoint:** /api/marcas/{id}
+```json
 📥 Cuerpo de la solicitud
 {
   "nombre": "NIKE",
   "pais": "Estados Unidos"
 }
-📌 Ejemplo de URL
+```
+## 📌 Ejemplo de URL
 
-http://localhost:3000/api/marcas/69c6e71e2bd7fb5b68f50c56
+** http://localhost:3000/api/marcas/69c6e71e2bd7fb5b68f50c56 **
+```json
 
 📤 Respuesta esperada
 {
   "message": "Marca actualizada correctamente"
 }
-❌ Eliminar marca
+```
 
-Método: DELETE
-Endpoint: /api/marcas/{id}
+## ❌ Eliminar marca
 
-📌 Ejemplo de URL
+**Método:** DELETE
+**Endpoint:** /api/marcas/{id}
 
-http://localhost:3000/api/marcas/69c6e71e2bd7fb5b68f50c56
+## 📌 Ejemplo de URL
 
+**http://localhost:3000/api/marcas/69c6e71e2bd7fb5b68f50c56**
+```json
 📤 Respuesta esperada
 {
   "message": "Marca eliminada correctamente"
 }
+```
