@@ -103,12 +103,7 @@ Respuesta esperada (JSON):
   "message": "Usuario eliminado correctamente"
 }
 ```
-## Notas
-**Todos los endpoints devuelven respuestas en formato JSON.**
-Para crear o actualizar usuarios, asegúrate de enviar todos los campos requeridos (nombre, email, edad, rol).
-Recursos adicionales
-Colección Postman
-
+___________________________________________________________________________________
 
 # 📄 API de Ventas
 
@@ -184,8 +179,7 @@ http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
 ```
 ## ❌ Eliminar una venta
 - **Método:** DELETE
-
-## Endpoint: /api/ventas/{id}
+- **Endpoint:** /api/ventas/{id}
 
 ## 📌 Ejemplo de URL
 http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
@@ -199,3 +193,72 @@ http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123
 El servidor debe estar ejecutándose en el puerto 3000.
 Los identificadores (_id) son generados por la base de datos (MongoDB).
 Se recomienda utilizar herramientas como Postman para probar los endpoints.
+## ➕ Crear múltiples marcas
+
+**Método:** `POST`  
+**Endpoint:** `/api/marcas/multiple`
+
+**Descripción:** Permite registrar varias marcas en una sola solicitud.
+
+### 📥 Cuerpo de la solicitud
+```json
+[
+  { "nombre": "Nike", "pais": "USA" },
+  { "nombre": "Adidas", "pais": "Alemania" },
+  { "nombre": "Puma", "pais": "Alemania" },
+  { "nombre": "Reebok", "pais": "USA" },
+  { "nombre": "Under Armour", "pais": "USA" },
+  { "nombre": "New Balance", "pais": "USA" },
+  { "nombre": "Vans", "pais": "USA" },
+  { "nombre": "Converse", "pais": "USA" },
+  { "nombre": "Fila", "pais": "Italia" },
+  { "nombre": "Levi's", "pais": "USA" }
+]
+📤 Respuesta esperada
+{
+  "message": "Marcas creadas correctamente"
+}
+📖 Obtener marcas
+
+Método: GET
+Endpoint: /api/marcas
+
+📤 Respuesta esperada
+[
+  {
+    "_id": "ID",
+    "nombre": "Nike",
+    "pais": "USA"
+  }
+]
+✏️ Actualizar marca
+
+Método: PUT
+Endpoint: /api/marcas/{id}
+
+📥 Cuerpo de la solicitud
+{
+  "nombre": "NIKE",
+  "pais": "Estados Unidos"
+}
+📌 Ejemplo de URL
+
+http://localhost:3000/api/marcas/69c6e71e2bd7fb5b68f50c56
+
+📤 Respuesta esperada
+{
+  "message": "Marca actualizada correctamente"
+}
+❌ Eliminar marca
+
+Método: DELETE
+Endpoint: /api/marcas/{id}
+
+📌 Ejemplo de URL
+
+http://localhost:3000/api/marcas/69c6e71e2bd7fb5b68f50c56
+
+📤 Respuesta esperada
+{
+  "message": "Marca eliminada correctamente"
+}
