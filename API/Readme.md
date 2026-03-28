@@ -2,37 +2,6 @@
 
 Este proyecto consiste en el desarrollo de una API REST que permite la gestión de usuarios, ventas, marcas, prendas y reportes. Proporciona endpoints para realizar operaciones CRUD y consultas, facilitando la administración de la información de manera eficiente.
 
-
-# 👤 API de Usuarios
-# 🛒 API de Ventas
-# 🏷️ API de Marcas
-# 👕 Módulo de Prendas (Reportes y Gestión)
-# 📊 Módulo de Reportes
-
-
-
-
-
-
-| Módulo      | Endpoint                                      | Descripción                          |
-|------------|-----------------------------------------------|--------------------------------------|
-| 👤 Usuarios | `http://localhost:3000/api/usuarios`          | Gestión de usuarios                  |
-| 🛒 Ventas   | `http://localhost:3000/api/ventas`            | Gestión de ventas                    |
-| 🏷️ Marcas   | `http://localhost:3000/api/marcas`            | Gestión de marcas                    |
-| 👕 Prendas  | `http://localhost:3000/api/prendas`           | Gestión de prendas                   |
-| 📊 Reportes | `http://localhost:3000/api/reportes`          | Consultas y reportes del sistema     |
-
----
-
-## 📌 Acceso rápido
-
-- 🔹 Usuarios: http://localhost:3000/api/usuarios  
-- 🔹 Ventas: http://localhost:3000/api/ventas  
-- 🔹 Marcas: http://localhost:3000/api/marcas  
-- 🔹 Prendas: http://localhost:3000/api/prendas  
-- 🔹 Reportes: http://localhost:3000/api/reportes  
-
-
 # API Usuarios
 
 Esta API permite realizar operaciones CRUD sobre los usuarios de la aplicación.
