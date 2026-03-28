@@ -74,7 +74,10 @@ Respuesta esperada (JSON):
   "rol": "cliente"
 }
 ```
-### PUT http://localhost:3000/api/usuarios/69c6e6b22bd7fb5b68f50c4c
+
+```bash
+
+PUT http://localhost:3000/api/usuarios/69c6e6b22bd7fb5b68f50c4c
 Respuesta esperada (JSON):
 {
   "message": "Usuario actualizado correctamente",
@@ -83,22 +86,28 @@ Respuesta esperada (JSON):
     "email": "juanp@gmail.com",
     "edad": 26,
     "rol": "cliente"
-  }
+            }
 }
-Eliminar usuario
-Método: DELETE
-URL: /:id
-Descripción: Elimina un usuario específico usando su id.
-Parámetros de ruta:
-id → ID del usuario a eliminar.
-Ejemplo de solicitud:
+```
+
+## Eliminar usuario
+**Método:** DELETE
+**URL:** /:id
+**Descripción:** Elimina un usuario específico usando su id.
+**Parámetros de ruta:**
+***id → ID del usuario a eliminar.***
+**Ejemplo de solicitud:**
+
+```bash
+
 DELETE http://localhost:3000/api/usuarios/69c6e6b22bd7fb5b68f50c55
 Respuesta esperada (JSON):
 {
   "message": "Usuario eliminado correctamente"
 }
-Notas
-Todos los endpoints devuelven respuestas en formato JSON.
+```
+## Notas
+**Todos los endpoints devuelven respuestas en formato JSON.**
 Para crear o actualizar usuarios, asegúrate de enviar todos los campos requeridos (nombre, email, edad, rol).
 Recursos adicionales
 Colección Postman
