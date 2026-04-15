@@ -1,4 +1,5 @@
 from flask import Blueprint, request
+
 from controllers import reportes_controller
 
 reportes_bp = Blueprint("reportes_bp", __name__)

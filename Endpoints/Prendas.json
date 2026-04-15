@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "f6f9cc27-de6c-4331-a019-5d2c72d61594",
+    "name": "Prendas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53436632",
+    "_collection_link": "https://go.postman.co/collection/53436632-f6f9cc27-de6c-4331-a019-5d2c72d61594?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Leer",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/prendas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "prendas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\"nombre\": \"Camiseta Deportiva\", \"talla\": \"M\", \"precio\": 20, \"marca\": \"Nike\"},\r\n  {\"nombre\": \"Pantalón Jogger\", \"talla\": \"L\", \"precio\": 35, \"marca\": \"Adidas\"},\r\n  {\"nombre\": \"Sudadera con Capucha\", \"talla\": \"XL\", \"precio\": 50, \"marca\": \"Puma\"},\r\n  {\"nombre\": \"Chaqueta Impermeable\", \"talla\": \"M\", \"precio\": 80, \"marca\": \"Reebok\"},\r\n  {\"nombre\": \"Short Deportivo\", \"talla\": \"S\", \"precio\": 25, \"marca\": \"Under Armour\"},\r\n  {\"nombre\": \"Zapatillas Running\", \"talla\": \"42\", \"precio\": 100, \"marca\": \"New Balance\"},\r\n  {\"nombre\": \"Tenis Casual\", \"talla\": \"41\", \"precio\": 60, \"marca\": \"Vans\"},\r\n  {\"nombre\": \"Camiseta Básica\", \"talla\": \"M\", \"precio\": 15, \"marca\": \"Converse\"},\r\n  {\"nombre\": \"Sudadera Retro\", \"talla\": \"L\", \"precio\": 45, \"marca\": \"Fila\"},\r\n  {\"nombre\": \"Jeans\", \"talla\": \"32\", \"precio\": 55, \"marca\": \"Levi's\"}\r\n]"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/prendas/multiple",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "prendas",
+            "multiple"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"marca\": \"Nike\",\r\n        \"nombre\": \"Camiseta Deportiva\",\r\n        \"precio\": 25,\r\n        \"talla\": \"M\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/prendas/69c6e8042bd7fb5b68f50c60",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "prendas",
+            "69c6e8042bd7fb5b68f50c60"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/prendas/69c6e8042bd7fb5b68f50c69",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "prendas",
+            "69c6e8042bd7fb5b68f50c69"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

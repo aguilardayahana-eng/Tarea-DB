@@ -1,0 +1,116 @@
+<div class="prendas-container">
+
+  <!-- Search -->
+  <div class="search-section">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="🔍 Buscar por nombre o marca..."
+      class="search-input">
+  </div>
+
+  <!-- Header -->
+  <div class="page-header">
+    <h1>👕 Gestión de Prendas</h1>
+    <button class="btn btn-primary" (click)="openModal('create')">
+      ➕ Nueva Prenda
+    </button>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="loading">⏳ Cargando prendas...</div>
+
+  <!-- Table -->
+  <div *ngIf="!loading" class="table-container">
+    <table class="usuarios-table">
+      <thead>
+        <tr>
+          <th>Marca</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Talla</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let prenda of prendasFiltradas">
+          <td>{{ prenda.marca }}</td>
+          <td>{{ prenda.nombre }}</td>
+          <td class="price">₡{{ prenda.precio }}</td>
+          <td>
+            <span class="size-badge">{{ prenda.talla }}</span>
+          </td>
+
+          <td>
+            <button class="btn btn-sm btn-edit" (click)="openModal('edit', prenda)">
+              ✏️ Editar
+            </button>
+            <button class="btn btn-sm btn-delete" (click)="deletePrenda(prenda._id)">
+              🗑️ Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Empty -->
+    <div *ngIf="prendasFiltradas.length === 0" class="empty-state">
+      📭 No hay prendas para mostrar
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div *ngIf="showModal" class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+
+      <div class="modal-header">
+        <h3>
+          {{ modalMode === 'create' ? '➕ Nueva Prenda' : '✏️ Editar Prenda' }}
+        </h3>
+        <button class="close-btn" (click)="closeModal()">×</button>
+      </div>
+
+      <form (ngSubmit)="savePrenda()" #form="ngForm">
+
+        <div class="form-group">
+          <label>Marca:</label>
+          <input type="text" [(ngModel)]="selectedPrenda.marca" name="marca" required>
+        </div>
+
+        <div class="form-group">
+          <label>Nombre:</label>
+          <input type="text" [(ngModel)]="selectedPrenda.nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label>Precio:</label>
+          <input type="number" [(ngModel)]="selectedPrenda.precio" name="precio" required>
+        </div>
+
+        <div class="form-group">
+          <label>Talla:</label>
+          <select [(ngModel)]="selectedPrenda.talla" name="talla">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+          </select>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="!form.form.valid">
+            💾 Guardar
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>

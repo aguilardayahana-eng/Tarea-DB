@@ -1,0 +1,64 @@
+<div class="ventas-container">
+
+  <!-- Search -->
+  <div class="search-section">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="🔍 Buscar por marca o prenda..."
+      class="search-input">
+  </div>
+
+  <!-- Header -->
+  <div class="page-header">
+    <h1>💰 Gestión de Ventas</h1>
+    <button class="btn btn-primary" (click)="openModal('create')">
+      ➕ Nueva Venta
+    </button>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="loading">⏳ Cargando ventas...</div>
+
+  <!-- Table -->
+  <div *ngIf="!loading" class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Prenda</th>
+          <th>Marca</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let venta of ventasFiltradas">
+          <td>{{ venta.prenda }}</td>
+          <td>{{ venta.marca }}</td>
+
+          <td>
+            <span class="quantity">{{ venta.cantidad }}</span>
+          </td>
+
+          <td class="total">₡{{ venta.precio }}</td>
+
+          <td class="date">{{ venta.fecha | date:'short' }}</td>
+
+          <td>
+            <button class="btn btn-sm btn-delete" (click)="deleteVenta(venta._id)">
+              🗑️ Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="ventasFiltradas.length === 0" class="empty-state">
+      📭 No hay ventas
+    </div>
+  </div>
+
+</div>

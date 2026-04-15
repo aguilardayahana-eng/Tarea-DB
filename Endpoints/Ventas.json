@@ -1,0 +1,111 @@
+{
+  "info": {
+    "_postman_id": "e2e02d75-6ea9-4cfd-a096-02076e5fb160",
+    "name": "Ventas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53436632",
+    "_collection_link": "https://go.postman.co/collection/53436632-e2e02d75-6ea9-4cfd-a096-02076e5fb160?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Crear",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"prenda\": \"Camiseta\",\r\n  \"marca\": \"Nike\",\r\n  \"cantidad\": 2,\r\n  \"precio\": 15000,\r\n  \"fecha\": \"2026-03-23\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/ventas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ventas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"producto\": \"Camisa\",\r\n  \"precio\": 30,\r\n  \"cantidad\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ventas",
+            "69c1f731352d6c012f3ae123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Leer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/ventas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ventas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/ventas/69c1f731352d6c012f3ae123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "ventas",
+            "69c1f731352d6c012f3ae123"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

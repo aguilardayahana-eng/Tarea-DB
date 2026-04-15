@@ -5,7 +5,6 @@ from controllers.prendasController import (
 )
 
 prendas_bp = Blueprint("prendas", __name__)
-
 prendas_bp.route("/", methods=["GET"])(get_prendas)
 prendas_bp.route("/<id>", methods=["GET"])(get_prenda)
 prendas_bp.route("/multiple", methods=["POST"])(crear_prendas)

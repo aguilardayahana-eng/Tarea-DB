@@ -6,12 +6,10 @@ from controllers.ventasController import (
     eliminar_venta
 )
 
-ventas_bp = Blueprint("ventas_bp", __name__)
+ventas_bp = Blueprint("ventas", __name__)
 
-# Rutas
+# Directamente las funciones (si tus controllers devuelven Response)
 ventas_bp.route("/", methods=["GET"])(get_ventas)
 ventas_bp.route("/multiple", methods=["POST"])(crear_venta)
 ventas_bp.route("/<id>", methods=["PUT"])(actualizar_venta)
 ventas_bp.route("/<id>", methods=["DELETE"])(eliminar_venta)
-
-
